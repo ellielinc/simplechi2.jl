@@ -1,13 +1,13 @@
-# Chi-Square-Computation-and-Minimization
+# Chi Square Minimization and Best Fit Plotting
+
+#Using Julia to compute and graph best fit plots to compare Model predictions and Data results.
+#Packages used are PyPlot and NLopt.
+
+#Graph the Data points
+
 using PyPlot
 x = [0, 2, 4, 6, 8, 10]
 y = [3, 5, 8, 6, 7, 9]
-
-uppererror = [0.25 0.25 0.25 0.25 0.25 0.25;]
-lowererror = [0.25 0.25 0.25 0.25 0.25 0.25;]
-errs = [lowererror;uppererror]
-
-println("From " * string(x[1]) * " to " * string(x[end]))
 
 x = map(Float64,x)
 
