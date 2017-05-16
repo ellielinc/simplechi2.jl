@@ -1,9 +1,9 @@
 # Chi Square Minimization and Best Fit Plotting
 
-#Using Julia to compute and graph best fit plots to compare Model predictions and Data results.
-#Packages used are PyPlot and NLopt.
+Using Julia to compute and graph best fit plots to compare Model predictions and Data results.
+Packages used are PyPlot and NLopt.
 
-#Graph the Data points
+Graph the Data points
 
 using PyPlot
 x = [0, 2, 4, 6, 8, 10]
