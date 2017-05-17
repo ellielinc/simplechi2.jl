@@ -4,11 +4,8 @@ y_data = [3.0, 5, 8, 6, 7, 9]
 sigma_data = 0.5*ones(6);
 uppererror = sigma_data'/2;
 lowererror = sigma_data'/2;
-
 errs = [lowererror;uppererror]
-
 x_data = map(Float64,x_data)
-
 fig = figure("best_fit_chisq",figsize=(10,10))
 pe = errorbar(x_data,y_data,yerr=errs,fmt="o", color="Green")
 axis("tight")
@@ -18,8 +15,6 @@ xlabel("x Data")
 ylabel("y Data")
 grid("on")
 gcf()
-
-
 #define function of alpha
 f= alpha->sum((y_data-(alpha[1]*x_data+alpha[2])./sigma_data).^2)
 
