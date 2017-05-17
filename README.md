@@ -1,6 +1,6 @@
 # Chi Squared Minimization and Plotting
 
-###### Plot data points with errorbars
+Plot data points with errorbars
 
 ```
 using PyPlot
