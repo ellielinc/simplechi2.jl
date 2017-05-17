@@ -1,6 +1,6 @@
-### Chi Squared Minimization and Plotting
+###### Chi Squared Minimization and Plotting
 
-Plot data points with errorbars
+##Plot data points with errorbars
 
 ```
 using PyPlot
@@ -21,12 +21,13 @@ ylabel("y Data")
 grid("on")
 gcf()
 ```
-Define function of alpha
+##Define function of alpha
+Basic chi-squared equation
 
 `f= alpha->sum((y_data-(alpha[1]*x_data+alpha[2])./sigma_data).^2)`
 
-Find chisq and alpha values
-
+##Find chisq and alpha values
+Here, usung the Nelder-Mead algorithm in NLopt.
 ```
 using NLopt;
 
@@ -37,7 +38,10 @@ min_objective!(opt, chisq);
 (minf,minx,ret) = optimize(opt, [1.234, 5.678]);
 println("got $minf at $minx (returned $ret)")
 ```
-Plot function with NLopt alpha values and plug in returned `$minx` values
+##Plot function with NLopt alpha values.
+Plug in returned `$minx` values for alpha.
+
 ```alpha=[0.485714,3.90476]
 y_model= (alpha[1]*x_data+alpha[2])
 scatter(x_data, y_model, color="Red")```
+
