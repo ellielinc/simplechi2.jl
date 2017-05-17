@@ -1,4 +1,3 @@
-
 # Chi Squared Minimization and Plotting
 
 Plot data points with errorbars
@@ -26,22 +25,11 @@ Define a function of alpha as a basic chi-squared equation.
 
 `f= alpha->sum((y_data-(alpha[1]*x_data+alpha[2])./sigma_data).^2)`
 
+
+
 Find chisq and alpha values. Here, usung the Nelder-Mead algorithm in NLopt.
 ```
 using NLopt;
-=======
-# Chi Square Minimization and Best Fit Plotting
-
-Using Julia to compute and graph best fit plots to compare Model predictions and Data results.
-Packages used are PyPlot and NLopt.
-
-Graph the Data points
-
-using PyPlot
-x = [0, 2, 4, 6, 8, 10]
-y = [3, 5, 8, 6, 7, 9]
-
-x = map(Float64,x)
 
 chisq=(alpha,g)->sum((((alpha[1]*x_data+alpha[2]) - y_data)./sigma_data).^2)
 
@@ -54,4 +42,5 @@ Plot function with NLopt alpha values. (Plug in returned `$minx` values for alph
 
 ```alpha=[0.485714,3.90476]
 y_model= (alpha[1]*x_data+alpha[2])
-scatter(x_data, y_model, color="Red")``
+scatter(x_data, y_model, color="Red")```
+
