@@ -42,5 +42,6 @@ Plot function with NLopt alpha values. (Plug in returned `$minx` values for alph
 
 ```alpha=[0.485714,3.90476]
 y_model= (alpha[1]*x_data+alpha[2])
-scatter(x_data, y_model, color="Red")```
+scatter(x_data, y_model, color="Red")
+```
 
